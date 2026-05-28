@@ -40,18 +40,10 @@ export default function CaseStudies() {
     <section className="case-studies">
       <h2 className="cs-title">Our Case Studies</h2>
 
-      <div className="cs-carousel-wrap">
-        {/* Ghost cards behind */}
-        <div className="cs-ghost cs-ghost-left">
-          <div className="cs-ghost-image-panel">
-            <IconGrid size={80} />
-          </div>
-        </div>
-        <div className="cs-ghost cs-ghost-right">
-          <div className="cs-ghost-image-panel">
-            <IconGrid size={80} />
-          </div>
-        </div>
+      <div className="cs-carousel">
+        {/* Ghost deck cards — stacked behind main card */}
+        <div className="cs-ghost cs-ghost-back" />
+        <div className="cs-ghost cs-ghost-front" />
 
         {/* Active card */}
         <div className="cs-card">

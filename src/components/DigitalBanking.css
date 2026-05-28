@@ -201,13 +201,22 @@
 
 .db-phone-wrap {
   flex-shrink: 0;
-  width: 268px;
+  width: 290px;
+  position: relative;
+  border-radius: 44px;
+  /* Outer glow ring matching iPhone frame */
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.12),
+    0 8px 16px rgba(0, 0, 0, 0.12),
+    0 24px 48px rgba(0, 0, 0, 0.18),
+    0 40px 80px rgba(0, 0, 0, 0.1);
 }
 
 .db-phone {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+  display: block;
+  border-radius: 44px;
 }
 
 .db-info {
@@ -288,14 +297,13 @@
   .db-row.row-left {
     flex-direction: column;
     gap: 32px;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     max-width: 100%;
   }
 
   .db-phone-wrap {
-    width: 200px;
-    margin: 0 auto;
+    width: 240px;
   }
 
   .db-info { max-width: 100%; }
@@ -310,7 +318,8 @@
   .digital-banking { padding: 48px 16px; }
   .db-title { font-size: 28px; }
   .db-sub { font-size: 15px; }
-  .db-phone-wrap { width: 170px; }
+  .db-phone-wrap { width: 200px; }
   .db-rows { gap: 48px; }
 }
+
 

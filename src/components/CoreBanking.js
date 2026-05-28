@@ -36,11 +36,6 @@ export default function CoreBanking() {
         {/* Dashboard: right-bleed laptop frame — left border + top border only */}
         <div className="cb-laptop-outer">
           <div className="cb-laptop-frame">
-            <div className="cb-titlebar">
-              <span className="dot red" />
-              <span className="dot yellow" />
-              <span className="dot green" />
-            </div>
             <div className="cb-screen">
               <img src={amlDashboard} alt="AML Dashboard" />
             </div>
@@ -57,11 +52,6 @@ export default function CoreBanking() {
         {/* Left: laptop partially off-screen */}
         <div className="feat-laptop-outer">
           <div className="feat-laptop-frame">
-            <div className="feat-titlebar">
-              <span className="dot red" />
-              <span className="dot yellow" />
-              <span className="dot green" />
-            </div>
             <div className="feat-screen">
               <img src={kycDashboard} alt="KYC Dashboard" />
             </div>

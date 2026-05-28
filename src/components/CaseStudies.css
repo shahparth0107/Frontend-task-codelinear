@@ -19,27 +19,39 @@
 .cs-carousel {
   position: relative;
   width: 100%;
-  max-width: 1015px;
+  max-width: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  min-height: 480px;
+  padding-bottom: 30px; /* room for stacked ghost cards below */
 }
 
+/* Ghost deck card base — dark shape, stacked below main card */
 .cs-ghost {
   position: absolute;
-  width: 87%;
-  height: 383px;
+  width: 96%;
+  max-width: 990px;
+  height: 438px;
   background: #01141B;
-  border-radius: 16px;
-  opacity: 0.5;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+  border-radius: 18px;
+  z-index: 0;
 }
 
-.cs-ghost.cs-ghost-left { left: 0; z-index: 0; }
-.cs-ghost.cs-ghost-right { right: 0; z-index: 0; }
+/* Front ghost: directly behind main, slightly lower + smaller */
+.cs-ghost.cs-ghost-front {
+  transform: translateY(12px) scaleX(0.97);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Back ghost: furthest behind, most offset + smallest */
+.cs-ghost.cs-ghost-back {
+  transform: translateY(22px) scaleX(0.93);
+  opacity: 0.15;
+  z-index: 0;
+}
 
 .cs-card {
   position: relative;
@@ -83,22 +95,6 @@
   max-width: 320px;
 }
 
-.cs-ghost-image-panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 160px;
-  background: #07193C;
-  border-radius: 8px;
-  padding: 16px;
-  margin: auto 0 auto 20px;
-}
-
-.cs-ghost-image-panel .cs-icon-grid {
-  max-width: 140px;
-  gap: 12px;
-}
 
 .cs-content {
   padding: 40px;
@@ -156,7 +152,11 @@
 .cs-controls {
   display: flex;
   align-items: center;
-  gap: 31px;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+  position: relative;
 }
 
 .cs-nav {
@@ -217,7 +217,8 @@
   cursor: pointer;
   border-bottom: 1px solid var(--blue);
   padding-bottom: 2px;
-  margin-left: auto;
+  position: absolute;
+  right: 0;
 }
 
 @media (max-width: 1080px) {

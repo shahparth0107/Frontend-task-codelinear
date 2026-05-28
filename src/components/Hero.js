@@ -1,6 +1,8 @@
 import React from 'react';
 import './Hero.css';
 import heroPerson from '../assets/images/hero-person.png';
+import homeCard    from '../assets/images/home-card.png';
+import homeCard2   from '../assets/images/home-card-2.png';
 
 export default function Hero() {
   return (
@@ -24,64 +26,27 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right: stacked mockup layout */}
+      {/* Right: photo + PNG overlay cards */}
       <div className="hero-visual">
-        {/* Background person photo */}
+
+        {/* Person photo */}
         <div className="hero-photo-wrap">
           <img src={heroPerson} alt="banking user" className="hero-photo" />
         </div>
 
-        {/* Balance card — top right, overlapping photo */}
-        <div className="overlay-card card-balance">
-          <div className="card-header">
-            <div className="card-avatar">
-              <div className="avatar-circle" />
-            </div>
-            <div className="card-user">
-              <span className="card-name">Toni Kross</span>
-              <span className="card-greeting">Good Morning</span>
-            </div>
-            <div className="card-bell">🔔</div>
-          </div>
-          <div className="card-balance-section">
-            <p className="card-label">Total balance</p>
-            <p className="card-amount">$42,295.00 USD</p>
-          </div>
-          <div className="card-divider" />
-          <div className="card-actions">
-            <div className="card-action">
-              <span className="action-icon">↑⊙</span>
-              <span>Fund Transfer</span>
-            </div>
-            <div className="card-action">
-              <span className="action-icon">⊕$</span>
-              <span>Add Money</span>
-            </div>
-            <div className="card-action">
-              <span className="action-icon">⊞</span>
-              <span>More</span>
-            </div>
-          </div>
-        </div>
+        {/* Balance card — top-right, overlapping photo (PNG asset) */}
+        <img
+          src={homeCard}
+          alt="Balance card"
+          className="hero-card hero-card-balance"
+        />
 
-        {/* Activity card — bottom left, overlapping photo */}
-        <div className="overlay-card card-activity">
-          <p className="activity-title">Recent activity</p>
-          <div className="activity-tabs">
-            <span className="tab">This Day</span>
-            <span className="tab active">This Week</span>
-            <span className="tab">This Month</span>
-            <span className="tab">6 Month</span>
-          </div>
-          <div className="activity-row">
-            <div className="activity-icon">↗</div>
-            <div className="activity-info">
-              <p className="activity-name"><strong>To Jin</strong> · Work</p>
-              <p className="activity-date">12 jun 2022</p>
-            </div>
-            <p className="activity-amount">-$59</p>
-          </div>
-        </div>
+        {/* Activity card — bottom-left, overlapping photo (PNG asset) */}
+        <img
+          src={homeCard2}
+          alt="Recent activity card"
+          className="hero-card hero-card-activity"
+        />
       </div>
 
       {/* Trusted by */}
