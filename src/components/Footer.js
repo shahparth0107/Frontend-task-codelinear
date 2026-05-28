@@ -57,7 +57,7 @@ export default function Footer() {
             <h4 className="col-title">N7 Banking</h4>
             <div className="col-links">
               {n7Links.map((s, i) => (
-                <a key={i} href="#" className="footer-link">
+                <a key={i} href="#about" className="footer-link">
                   {s} <span className="link-arrow">→</span>
                 </a>
               ))}
@@ -68,7 +68,13 @@ export default function Footer() {
             <h4 className="col-title">Our Socials</h4>
             <div className="col-links">
               {socials.map((s, i) => (
-                <a key={i} href="#" className="footer-link">
+                <a
+                  key={i}
+                  href={s === 'LinkedIn' ? 'https://www.linkedin.com' : 'https://x.com'}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-link"
+                >
                   {s} <span className="link-arrow">→</span>
                 </a>
               ))}
