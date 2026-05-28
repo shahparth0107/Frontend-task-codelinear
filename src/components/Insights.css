@@ -206,6 +206,18 @@
 
 @media (max-width: 700px) {
   .insights { padding: 48px 20px; }
+  .insights-heading { font-size: 28px; }
   .insights-small-row { flex-direction: column; }
   .insight-title.large-title { font-size: 22px; }
+  .insight-card.large { height: auto; }
 }
+
+@media (max-width: 480px) {
+  .insights { padding: 40px 16px; }
+  .insights-heading { font-size: 24px; }
+  .insight-title { font-size: 18px; }
+  .insight-title.large-title { font-size: 20px; }
+  .insight-content { padding: 24px 20px; }
+  .insight-card.small { padding: 24px 20px; }
+}
+

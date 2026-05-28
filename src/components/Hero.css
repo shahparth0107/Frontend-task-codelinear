@@ -369,8 +369,17 @@
   .hero-title { font-size: 32px; }
   .hero-ctas { flex-direction: column; }
   .btn-primary, .btn-outline { width: 100%; padding: 15px 20px; }
-  .hero-visual { height: 300px; }
-  .hero-photo-wrap { left: 40px; width: 260px; height: 260px; }
-  .card-balance { width: 180px; font-size: 0.85em; }
-  .card-activity { width: 200px; }
+  .hero-visual { height: 320px; }
+  .hero-photo-wrap { left: 30px; width: 240px; height: 260px; }
+  .card-balance { width: 170px; font-size: 0.82em; right: -4px; }
+  .card-activity { width: 185px; left: -4px; }
 }
+
+@media (max-width: 375px) {
+  .hero-title { font-size: 28px; }
+  .hero-visual { height: 290px; }
+  .hero-photo-wrap { left: 20px; width: 200px; height: 230px; }
+  .card-balance { width: 150px; font-size: 0.75em; }
+  .card-activity { width: 165px; font-size: 0.75em; }
+}
+

@@ -278,16 +278,16 @@
 @media (max-width: 1100px) {
   .cloud-banking {
     flex-direction: column;
-    padding: 80px 0 0 40px;
+    padding: 80px 40px 60px;
     align-items: flex-start;
     gap: 40px;
   }
-  .cb-content { margin-right: 0; }
+  .cb-content { margin-right: 0; max-width: 100%; }
   .cb-laptop-outer { width: 100%; }
 
   .features-section {
     flex-direction: column;
-    padding: 0 40px 60px 0;
+    padding: 60px 40px;
     gap: 40px;
   }
   .feat-laptop-outer { width: 100%; }
@@ -299,12 +299,20 @@
     border-left: 1.5px solid rgba(0,180,253,0.2);
     border-radius: 0 0 8px 8px;
   }
-  .features-content { padding: 0 40px; }
+  .features-content { padding: 0; }
 }
 
 @media (max-width: 600px) {
-  .cloud-banking { padding: 80px 0 0 20px; }
-  .cb-title { font-size: 36px; }
-  .features-content { padding: 0 20px; }
+  .cloud-banking { padding: 60px 20px 40px; }
+  .cb-title { font-size: 32px; }
+  .features-section { padding: 40px 20px; }
+  .features-content { padding: 0; }
   .features-grid { flex-direction: column; }
+  .features-title { font-size: 22px; }
 }
+
+@media (max-width: 400px) {
+  .cb-title { font-size: 28px; }
+  .cb-sub { font-size: 14px; }
+}
+

@@ -3,7 +3,7 @@
   top: 31px;
   left: 50%;
   transform: translateX(-50%);
-  width: 716px;
+  width: min(716px, calc(100% - 40px));
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -92,9 +92,12 @@
   border-radius: 2px;
 }
 
+@media (max-width: 900px) {
+  .btn-outline-nav { display: none; }
+}
+
 @media (max-width: 768px) {
   .navbar {
-    width: calc(100% - 40px);
     top: 16px;
   }
 
@@ -106,14 +109,14 @@
     right: 0;
     background: rgba(0, 13, 18, 0.97);
     flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
     border-radius: 12px;
     border: 1px solid rgba(233, 244, 249, 0.1);
+    gap: 16px;
   }
 
   .navbar-links.open { display: flex; }
 
   .hamburger { display: flex; }
-
-  .btn-outline-nav { display: none; }
 }

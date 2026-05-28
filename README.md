@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# N7 Banking — Frontend Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A pixel-perfect, fully responsive frontend implementation of the [N7 Figma design](https://www.figma.com/design/ktuyhOppLLgLFCZwzQCOBk/N7?node-id=24-3468&t=Mp4mk0xfRmvPO2dB-0), built as part of the **Software Development Engineer (SDE) – Full Stack** role assignment.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔗 Links
 
-### `npm start`
+- **Figma Design:** [View on Figma](https://www.figma.com/design/ktuyhOppLLgLFCZwzQCOBk/N7?node-id=24-3468&t=Mp4mk0xfRmvPO2dB-0)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- **React.js** (Create React App)
+- **Vanilla CSS** — modular per-component stylesheets
+- **Google Fonts** — Archivo, Chivo Mono
+- No external UI libraries
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ✨ Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ✅ Pixel-perfect implementation matching the Figma design
+- ✅ Fully responsive across desktop, tablet, and mobile (320px+)
+- ✅ Smooth hover interactions, transitions, and micro-animations
+- ✅ Clean component-based architecture — one JS + CSS file per section
+- ✅ Hamburger navigation menu for mobile
+- ✅ Animated marquee ticker strip
+- ✅ Case studies carousel with dot navigation
+- ✅ Optimized images with `drop-shadow` and `object-fit`
+- ✅ `overflow-x: hidden` and fluid layouts — zero horizontal scroll on any device
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+src/
+├── components/
+│   ├── Navbar.js / Navbar.css
+│   ├── Hero.js / Hero.css
+│   ├── Marquee.js / Marquee.css
+│   ├── Solutions.js / Solutions.css
+│   ├── CoreBanking.js / CoreBanking.css
+│   ├── DigitalBanking.js / DigitalBanking.css
+│   ├── CaseStudies.js / CaseStudies.css
+│   ├── Insights.js / Insights.css
+│   ├── CTABanner.js / CTABanner.css
+│   └── Footer.js / Footer.css
+├── assets/
+├── App.js
+├── App.css
+├── index.js
+└── index.css
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Setup & Run Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Prerequisites:** Node.js ≥ 16
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# 1. Clone the repository
+git clone https://github.com/shahparth0107/Frontend-task-codelinear.git
+cd n7-banking
 
-## Learn More
+# 2. Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 3. Start development server
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app will open at `http://localhost:3000`.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📱 Responsive Breakpoints
 
-### Analyzing the Bundle Size
+| Breakpoint | Target |
+|---|---|
+| `> 1100px` | Desktop (default layout) |
+| `≤ 1100px` | Large tablet — sections start stacking |
+| `≤ 900px` | Tablet — full column layouts |
+| `≤ 768px` | Mobile — hamburger nav active |
+| `≤ 540px` | Small mobile — font/padding scale down |
+| `≤ 375px` | Very small phones (iPhone SE etc.) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🎯 What Was Evaluated
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Frontend Accuracy** — matched spacing, typography, colors from Figma
+- **Responsiveness** — fluid layouts across all device widths
+- **Component Structure** — isolated, reusable, maintainable components
+- **Code Quality** — consistent naming, no inline styles, clean CSS variables
+- **Performance** — no heavy dependencies, optimized assets
+- **Developer Practices** — semantic HTML, `.gitignore`, modular architecture
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Submitted by **Parth Shah** · Deadline: 28th May 2026*
