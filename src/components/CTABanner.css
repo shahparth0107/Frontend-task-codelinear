@@ -1,0 +1,110 @@
+.cta-banner {
+  position: relative;
+  background: var(--black);
+  padding: 60px 80px;
+  overflow: hidden;
+}
+
+.cta-bg-text {
+  position: absolute;
+  right: 0;
+  top: -160px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 573px;
+  color: var(--white);
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+  line-height: 120%;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%);
+  border-radius: 27px;
+  padding: 60px 65px;
+  gap: 40px;
+}
+
+.cta-left {
+  max-width: 608px;
+}
+
+.cta-title {
+  font-size: 53px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.cta-sub {
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 51px;
+  background: var(--sky-gradient);
+  border-radius: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 59px;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-outline:hover { background: rgba(233,244,249,0.08); }
+
+@media (max-width: 900px) {
+  .cta-banner { padding: 40px 24px; }
+  .cta-inner {
+    flex-direction: column;
+    padding: 40px 30px;
+    gap: 32px;
+  }
+  .cta-title { font-size: 36px; }
+  .cta-buttons { flex-direction: column; gap: 16px; }
+  .btn-primary, .btn-outline { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .cta-title { font-size: 28px; }
+  .cta-banner { padding: 32px 20px; }
+}

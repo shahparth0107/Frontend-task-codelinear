@@ -1,0 +1,310 @@
+/* ═══════════════════════════════════════
+   FRAME 12 — Cloud Banking
+   Layout: text LEFT | laptop bleeds RIGHT
+═══════════════════════════════════════ */
+.cloud-banking {
+  position: relative;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  min-height: 619px;
+  padding: 80px 0 80px 80px;   /* no right padding — laptop bleeds to edge */
+  overflow: hidden;
+}
+
+/* Faint "CB7" watermark */
+.cb-bg-text {
+  position: absolute;
+  left: -163px;
+  top: -2px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 573px;
+  line-height: 120%;
+  color: var(--white);
+  opacity: 0.03;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Left text block */
+.cb-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  flex-shrink: 0;
+  margin-right: 60px;
+}
+
+.cb-title {
+  font-size: 53px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.cb-sub {
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--white);
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.btn-primary-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 51px;
+  background: var(--sky-gradient);
+  border-radius: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+.btn-primary-blue:hover { opacity: 0.85; }
+
+.learn-more-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--blue);
+  cursor: pointer;
+  width: fit-content;
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 2px;
+}
+
+/* Laptop: grows to fill remaining space, bleeds off right edge */
+.cb-laptop-outer {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  z-index: 1;
+}
+
+.cb-laptop-frame {
+  border: 1.5px solid rgba(0, 180, 253, 0.4);
+  border-right: none;          /* bleeds off right */
+  border-radius: 16px 0 0 0;
+  overflow: hidden;
+  background: #12122a;
+}
+
+.cb-titlebar {
+  height: 28px;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(0,180,253,0.15);
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot.red    { background: #ff5f57; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green  { background: #28c840; }
+
+.cb-screen img,
+.feat-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cb-laptop-shelf {
+  height: 20px;
+  background: rgba(0,180,253,0.05);
+  border: 1.5px solid rgba(0,180,253,0.2);
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 8px;
+}
+
+/* ═══════════════════════════════════════
+   FRAME 80 — Features
+   Layout: laptop LEFT (partial bleed) | text RIGHT
+═══════════════════════════════════════ */
+.features-section {
+  position: relative;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  min-height: 681px;
+  padding: 80px 80px 80px 0;  /* no left padding — laptop bleeds from left */
+  overflow: hidden;
+}
+
+/* Left: laptop from edge */
+.feat-laptop-outer {
+  position: relative;
+  flex-shrink: 0;
+  width: 492px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.feat-laptop-frame {
+  border: 1.5px solid rgba(0, 180, 253, 0.4);
+  border-left: none;           /* flush to left edge */
+  border-radius: 0 16px 16px 0;
+  overflow: hidden;
+  background: #12122a;
+}
+
+.feat-titlebar {
+  height: 24px;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(0,180,253,0.15);
+}
+
+.feat-laptop-shelf {
+  height: 18px;
+  background: rgba(0,180,253,0.05);
+  border: 1.5px solid rgba(0,180,253,0.2);
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 8px 0;
+}
+
+/* Right: content */
+.features-content {
+  flex: 1;
+  padding: 0 0 0 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  max-width: 650px;
+}
+
+.features-title {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--white);
+}
+
+.features-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.features-list-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.features-grid {
+  display: flex;
+  gap: 29px;
+}
+
+.features-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 3px 0;
+}
+
+.check-icon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.check-circle {
+  position: absolute;
+  inset: 0;
+  background: var(--sky-gradient);
+  border-radius: 50%;
+}
+
+.check-mark {
+  position: absolute;
+  color: #fff;
+  font-size: 11px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-weight: 700;
+}
+
+.feature-item > span {
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .cloud-banking {
+    flex-direction: column;
+    padding: 80px 0 0 40px;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .cb-content { margin-right: 0; }
+  .cb-laptop-outer { width: 100%; }
+
+  .features-section {
+    flex-direction: column;
+    padding: 0 40px 60px 0;
+    gap: 40px;
+  }
+  .feat-laptop-outer { width: 100%; }
+  .feat-laptop-frame {
+    border-left: 1.5px solid rgba(0,180,253,0.4);
+    border-radius: 16px;
+  }
+  .feat-laptop-shelf {
+    border-left: 1.5px solid rgba(0,180,253,0.2);
+    border-radius: 0 0 8px 8px;
+  }
+  .features-content { padding: 0 40px; }
+}
+
+@media (max-width: 600px) {
+  .cloud-banking { padding: 80px 0 0 20px; }
+  .cb-title { font-size: 36px; }
+  .features-content { padding: 0 20px; }
+  .features-grid { flex-direction: column; }
+}

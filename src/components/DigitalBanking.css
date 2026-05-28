@@ -1,0 +1,305 @@
+/* ─────────────────────────────────────────
+   DIGITAL BANKING SECTION  (Frame 39)
+   Background: #E9F4F9 (light blue-white)
+───────────────────────────────────────── */
+.digital-banking {
+  position: relative;
+  background: #E9F4F9;
+  padding: 100px 80px 80px;
+  overflow: hidden;
+}
+
+/* ── Background decorative ── */
+
+/* "N7" large faint watermark — top center */
+.db-bg-n7 {
+  position: absolute;
+  left: 277px;
+  top: -67px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 573px;
+  line-height: 120%;
+  color: #000D12;
+  opacity: 0.05;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* "7" extra-large faint watermark — bottom right */
+.db-bg-seven {
+  position: absolute;
+  right: -120px;
+  bottom: -600px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 1524px;
+  line-height: 120%;
+  color: #000D12;
+  opacity: 0.03;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Circular SVG line-art overlays */
+.db-circle-art {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.db-circle-top-right {
+  width: 420px;
+  height: 420px;
+  right: -80px;
+  top: 80px;
+}
+
+.db-circle-bottom-left {
+  width: 380px;
+  height: 380px;
+  left: -80px;
+  bottom: 200px;
+}
+
+/* Color glow ellipses */
+.db-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Orange-ish top-left */
+.db-glow-orange-tl {
+  width: 586px;
+  height: 586px;
+  left: -86px;
+  top: -261px;
+  background: linear-gradient(103.43deg, #FDA700 -1.02%, #CE5700 83.53%);
+  opacity: 0.02;
+}
+
+/* Orange-ish top-right */
+.db-glow-orange-tr {
+  width: 779px;
+  height: 779px;
+  left: 661px;
+  top: -92px;
+  background: linear-gradient(103.43deg, #FDA700 -1.02%, #CE5700 83.53%);
+  opacity: 0.05;
+}
+
+/* Blue bottom-left */
+.db-glow-blue-bl {
+  width: 779px;
+  height: 779px;
+  left: -364px;
+  bottom: -300px;
+  background: linear-gradient(100.92deg, #00CFFD 35.49%, #0015CE 82.38%);
+  opacity: 0.1;
+}
+
+/* ── Section header ── */
+.db-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
+}
+
+.db-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 439px;
+}
+
+.db-title {
+  font-size: 53px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #000D12;
+}
+
+.db-sub {
+  font-size: 16px;
+  line-height: 130%;
+  color: #000D12;
+  opacity: 0.7;
+  max-width: 379px;
+}
+
+.btn-primary-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 51px;
+  background: var(--sky-gradient);
+  border-radius: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+.btn-primary-blue:hover { opacity: 0.85; }
+
+.learn-more-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: var(--sky-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  width: fit-content;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--blue);
+}
+
+/* ── Phone rows ── */
+.db-rows {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+  align-items: center;
+}
+
+/* Row: phone right, text right → phone LEFT of text */
+.db-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 652px;
+}
+
+/* row-right = phone on right side (text left, phone right) */
+.db-row.row-right {
+  flex-direction: row;        /* text first, then phone */
+}
+
+/* row-left = phone on left side (phone first, then text) */
+.db-row.row-left {
+  flex-direction: row-reverse; /* text on left by reversing */
+  gap: 76px;
+  justify-content: flex-end;
+}
+
+.db-phone-wrap {
+  flex-shrink: 0;
+  width: 268px;
+}
+
+.db-phone {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+}
+
+.db-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  max-width: 304px;
+}
+
+.db-info-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #000D12;
+}
+
+.db-info-desc {
+  font-size: 16px;
+  line-height: 130%;
+  color: #000D12;
+  opacity: 0.7;
+}
+
+.db-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.db-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.bullet-check {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.bullet-circle {
+  position: absolute;
+  inset: 0;
+  background: var(--sky-gradient);
+  border-radius: 50%;
+}
+
+.bullet-tick {
+  position: absolute;
+  color: #fff;
+  font-size: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-weight: 700;
+}
+
+.db-bullet > span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #000D12;
+  opacity: 0.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .digital-banking { padding: 60px 24px 60px; }
+  .db-title { font-size: 36px; }
+
+  .db-row,
+  .db-row.row-right,
+  .db-row.row-left {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .db-phone-wrap {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .db-info { max-width: 100%; }
+  .db-rows { gap: 60px; }
+  .db-header { margin-bottom: 40px; }
+  .db-bg-n7 { display: none; }
+  .db-bg-seven { display: none; }
+  .db-circle-art { display: none; }
+}

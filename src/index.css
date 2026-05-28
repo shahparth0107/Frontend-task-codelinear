@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Chivo+Mono:wght@400;500&display=swap');
+
+:root {
+  --black: #000D12;
+  --white: #E9F4F9;
+  --blue: #00B4FD;
+  --blue-dark: #003ACE;
+  --blue-mid: #081E69;
+  --bg-card: #01141B;
+  --bg-card2: #07193C;
+  --sky-gradient: linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%);
+  --glow: linear-gradient(103.43deg, #00B4FD -1.02%, #003ACE 83.53%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Archivo', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: 'Chivo Mono', monospace; border: none; outline: none; }
+img { max-width: 100%; display: block; }

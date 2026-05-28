@@ -1,0 +1,211 @@
+.insights {
+  position: relative;
+  background: var(--black);
+  padding: 80px;
+  display: flex;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.insights-glow {
+  position: absolute;
+  width: 557px;
+  height: 557px;
+  left: 58px;
+  top: 160px;
+  background: var(--glow);
+  opacity: 0.1;
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.insights-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  min-width: 350px;
+  max-width: 463px;
+  padding-top: 0;
+}
+
+.insights-heading {
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: transparent;
+  width: 190px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-outline-white:hover { background: rgba(233,244,249,0.08); }
+
+.insights-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.insight-card {
+  background: var(--bg-card);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.insight-card.large {
+  display: flex;
+  height: 318px;
+}
+
+.insight-thumbnail {
+  width: 295px;
+  height: 100%;
+  background: var(--bg-card2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  flex-shrink: 0;
+}
+
+.icon-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 220px;
+}
+
+.icon-grid-item {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.insight-content {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1;
+  justify-content: center;
+}
+
+.insight-card.small {
+  padding: 38px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1;
+}
+
+.insights-small-row {
+  display: flex;
+  gap: 29px;
+}
+
+.insight-tag {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #2490BB;
+  opacity: 0.8;
+  letter-spacing: 0.05em;
+}
+
+.insight-title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--white);
+}
+
+.insight-title.large-title {
+  font-size: 27px;
+}
+
+.insight-meta {
+  display: flex;
+  gap: 14px;
+}
+
+.insight-meta span {
+  font-size: 14px;
+  line-height: 130%;
+  color: #64A8C4;
+  opacity: 0.8;
+}
+
+.btn-read-more {
+  margin-top: auto;
+  padding: 10px 20px;
+  border: 1px solid rgba(233, 244, 249, 0.5);
+  border-radius: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(233, 244, 249, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  width: 100%;
+}
+
+.btn-read-more:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.read-all-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--blue);
+  cursor: pointer;
+  align-self: flex-end;
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 2px;
+}
+
+@media (max-width: 1100px) {
+  .insights {
+    flex-direction: column;
+    padding: 60px 40px;
+  }
+
+  .insights-left { min-width: auto; max-width: 100%; }
+
+  .insight-card.large {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .insight-thumbnail { width: 100%; height: 180px; }
+}
+
+@media (max-width: 700px) {
+  .insights { padding: 48px 20px; }
+  .insights-small-row { flex-direction: column; }
+  .insight-title.large-title { font-size: 22px; }
+}

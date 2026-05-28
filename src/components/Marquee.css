@@ -1,0 +1,48 @@
+.marquee-wrapper {
+  background: #fff;
+  height: 116px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(0,13,18,0.1);
+  border-bottom: 1px solid rgba(0,13,18,0.1);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  animation: marquee-scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  font-family: 'Archivo', sans-serif;
+  font-size: 47px;
+  line-height: 1;
+  color: #000D12;
+  flex-shrink: 0;
+}
+
+.marquee-item.gradient {
+  background: var(--sky-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}
+
+.marquee-item.bold {
+  font-weight: 600;
+  color: #000D12;
+}
+
+.marquee-item.star {
+  opacity: 0.3;
+  font-size: 36px;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
